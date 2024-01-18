@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Juego de Banderas</title>
+</head>
+
+<body>
+    <h1>ADIVINA LA BANDERA!</h1>
+
+    <!--Pantalla Principal-->
+    <div id="pantalla-inicial">
+        <p>¿A qué país pertenece la bandera?</p>
+        <button class="btn" onclick="comenzarJuego()">COMENZAR A JUGAR</button>
+    </div>
+    <!--Pantalla de Juego-->
+    <div class="pantalla-juego" id="pantalla-juego">
+        <img src="img/ar.webp" alt="Argentina" id="imgBandera">
+        <div class="opciones">
+            <div class="opcion" id="op0" onclick="comprobarRespuesta(0)">
+                <div class="letra" id="l0">A</div>
+                <div class="nombre" id="n0">OPCIÓN A</div>
+            </div>
+            <div class="opcion" id="op1" onclick="comprobarRespuesta(1)">
+                <div class="letra" id="l1">B</div>
+                <div class="nombre" id="n1">OPCIÓN B</div>
+            </div>
+            <div class="opcion" id="op2" onclick="comprobarRespuesta(2)">
+                <div class="letra" id="l2">C</div>
+                <div class="nombre" id="n2">OPCIÓN C</div>
+            </div>
+        </div> 
+    </div>
+
+<!--Pantalla Final-->
+<div id="pantalla-final">
+    <h2>CORRECTAS: <span id="numCorrectas">3</span></h2>
+    <h2>INCORRECTAS: <span id="numIncorrectas">2</span></h2>
+    <button class="btn" onclick="volverAlInicio()">VOLVER AL INICIO</button>
+    </div>
+    <footer>Desarrollo by エイキン</footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
